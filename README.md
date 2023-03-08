@@ -14,7 +14,7 @@ I plan on implementing more features as I need them.
 
 ## Install
 
-### Downloading an installing a release version
+### Downloading and installing a release version
 
 I published a release version to download.<br>
 Just select it from the right side and download the version you need.<br>
