@@ -1,0 +1,53 @@
+﻿<Window x:Class="SotFSaveManager.Dialogs.InfoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SotFSaveManager.Dialogs"
+        mc:Ignorable="d"
+        Background="#36393F"
+        Title="Info" 
+        Height="200" Width="300" 
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" 
+        BorderBrush="#FF252525" BorderThickness="1,1,1,1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0"
+                        Background="#252525">
+
+            <Grid HorizontalAlignment="Stretch">
+                <Label x:Name="lbl_title"
+                       Foreground="Gray"
+                       FontWeight="SemiBold"/>
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                    <Button Content="✕"
+                        Background="Transparent"
+                        Width="25" Height="25"
+                        FontWeight="Bold"
+                        Click="Button_Click"
+                        Focusable="False"
+                        Style="{StaticResource ModernButton}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="label" Foreground="white" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Button Click="Button_Click" Grid.Row="1" Margin="10" Style="{StaticResource ModernButton}">OK</Button>
+        </Grid>
+    </Grid>
+</Window>

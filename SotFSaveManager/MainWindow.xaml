@@ -1,0 +1,61 @@
+﻿<Window x:Class="SotFSaveManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SotFSaveManager"
+        xmlns:viewModel="clr-namespace:SotFSaveManager.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="SotF Save Manager"
+        Height="450" Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="#36393F"
+        AllowsTransparency="True"
+        WindowStyle="None" BorderBrush="#FF252525" BorderThickness="1,1,1,1">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" MouseDown="Border_MouseDown"
+                        Background="#252525">
+
+            <Grid HorizontalAlignment="Stretch">
+                <Label Content="SotF Save Manager"
+                       Foreground="Gray"
+                       FontWeight="SemiBold"/>
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                    <Button Content="━"
+                        Background="Transparent"
+                        Width="25" Height="25"
+                        FontWeight="Bold"
+                        Click="MinimizeButton_Click"
+                        Focusable="False"
+                        Style="{StaticResource ModernButton}"/>
+                    <Button Content="✕"
+                        Background="Transparent"
+                        Width="25" Height="25"
+                        FontWeight="Bold"
+                        Click="CloseButton_Click"
+                        Focusable="False"
+                        Style="{StaticResource ModernButton}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Content -->
+        <ContentControl Grid.Row="2"
+                                Margin="10"
+                                DataContext="{Binding CurrentView}"
+                                Content="{Binding }"/>
+    </Grid>
+</Window>

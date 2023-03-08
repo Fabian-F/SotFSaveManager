@@ -1,0 +1,25 @@
+﻿<Application x:Class="SotFSaveManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SotFSaveManager"
+             xmlns:viewModel="clr-namespace:SotFSaveManager.MVVM.ViewModel"
+             xmlns:view="clr-namespace:SotFSaveManager.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/ModernButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/ModernTextbox.xaml"/>
+                <ResourceDictionary Source="Themes/ModernScrollbar.xaml"/>
+                <ResourceDictionary Source="Themes/ToggleButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:FileViewModel}">
+                <view:FileView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:ManagerViewModel}">
+                <view:ManagerView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
