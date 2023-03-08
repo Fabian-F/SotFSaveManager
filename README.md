@@ -14,6 +14,12 @@ I plan on implementing more features as I need them.
 
 ## Install
 
+### Downloading an installing a release version
+
+I published a release version to download.<br>
+Just select it from the right side and download the version you need.<br>
+You can install it by starting the setup or use it out of the box by starting the exe file.
+
 ### Building it yourself
 
 Just Clone or Download this repository and open it with Visual Studio.<br>
