@@ -12,6 +12,8 @@ Currently this software has 6 functions:
 
 I plan on implementing more features as I need them.
 
+<img src="https://user-images.githubusercontent.com/55441830/223964558-733a18d8-6bb8-448e-af80-0c3d0dfa96cd.png" width="70%">
+
 ## Install
 
 ### Downloading and installing a release version
